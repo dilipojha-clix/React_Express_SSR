@@ -1,31 +1,18 @@
 import React from 'react'
-import {
-    Link,
-    Route,
-   
-  } from "react-router-dom";
-  import Home from './components/Home'
-  import About from './components/About'
+import {Route} from "react-router-dom";
+import Menu from './components/Menu'
+import Home from './components/Home'
+import About from './components/About'
+import UserList from './components/UserList'
   
   
 export default () =>{
     return (
         <div>
-            <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          
-        </ul>
-
-        <hr />
-        </div>
+            <Menu/>
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
+            <Route exact path="/users" component={UserList}/>
         </div>
     )
 }
